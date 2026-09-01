@@ -576,26 +576,26 @@ export class Game {
     const base = pointAt(PATH_LEN);
     c.fillStyle = "rgba(90,255,200,0.12)";
     c.beginPath();
-    c.arc(base.x - 40, base.y, 46, 0, Math.PI * 2);
+    c.arc(WORLD_W - 52, base.y, 46, 0, Math.PI * 2);
     c.fill();
     c.strokeStyle = "#4ce0b3";
     c.lineWidth = 2;
     c.beginPath();
-    c.arc(base.x - 40, base.y, 26, 0, Math.PI * 2);
+    c.arc(WORLD_W - 52, base.y, 26, 0, Math.PI * 2);
     c.stroke();
     c.fillStyle = "#4ce0b3";
     c.font = "11px ui-monospace, monospace";
     c.textAlign = "center";
-    c.fillText("BASE", base.x - 40, base.y + 4);
+    c.fillText("BASE", WORLD_W - 52, base.y + 4);
 
     // spawn marker
     const sp = pointAt(0);
     c.strokeStyle = "rgba(255,90,90,0.7)";
     c.beginPath();
-    c.arc(sp.x + 40, sp.y, 18, 0, Math.PI * 2);
+    c.arc(46, sp.y, 18, 0, Math.PI * 2);
     c.stroke();
     c.fillStyle = "rgba(255,120,120,0.9)";
-    c.fillText("JUMP", sp.x + 40, sp.y - 26);
+    c.fillText("JUMP", 46, sp.y - 26);
 
     for (const t of this.towers) this.drawTower(t);
 
