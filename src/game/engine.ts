@@ -119,8 +119,8 @@ function buildPath() {
   const segs: { x: number; y: number; dx: number; dy: number; len: number }[] = [];
   let total = 0;
   for (let i = 0; i < PATH.length - 1; i++) {
-    const [x, y] = PATH[i];
-    const [x2, y2] = PATH[i + 1];
+    const [x, y] = PATH[i]!;
+    const [x2, y2] = PATH[i + 1]!;
     const dx = x2 - x;
     const dy = y2 - y;
     const len = Math.hypot(dx, dy);
