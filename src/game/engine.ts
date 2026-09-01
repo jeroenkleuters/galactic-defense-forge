@@ -138,7 +138,7 @@ function pointAt(t: number) {
     if (d <= s.len) return { x: s.x + s.dx * d, y: s.y + s.dy * d, a: Math.atan2(s.dy, s.dx) };
     d -= s.len;
   }
-  const last = SEGMENTS[SEGMENTS.length - 1];
+  const last = SEGMENTS[SEGMENTS.length - 1]!;
   return { x: last.x + last.dx * last.len, y: last.y + last.dy * last.len, a: Math.atan2(last.dy, last.dx) };
 }
 
