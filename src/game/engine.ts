@@ -318,7 +318,7 @@ export class Game {
       if (s.x < 0) s.x += WORLD_W;
     }
 
-    while (this.queue.length && this.queue[0].at <= this.clock) {
+    while (this.queue.length && this.queue[0]!.at <= this.clock) {
       const q = this.queue.shift()!;
       const size = q.type === "destroyer" ? 26 : q.type === "bomber" ? 16 : 11;
       const p = pointAt(0);
